@@ -7,7 +7,6 @@
 BAZELISK_VERSION="${BAZELISK_VERSION:-"1.11.0"}"
 INSTALL_DIR="${INSTALL_DIR:-"/usr/local/bin"}"
 
-# TODO: Windows support
 unameOut="$(uname -s)"
 case "${unameOut}" in
   Darwin*)  os="darwin";;
