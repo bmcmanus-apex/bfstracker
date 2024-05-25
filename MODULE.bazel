@@ -1,0 +1,27 @@
+###############################################################################
+# Bazel now uses Bzlmod by default to manage external dependencies.
+# Please consider migrating your external dependencies from WORKSPACE to MODULE.bazel.
+#
+# For more details, please check https://github.com/bazelbuild/bazel/issues/18958
+###############################################################################
+module(
+    name = "fitness_tracker",
+    version = "1.0.0",
+)
+
+bazel_dep(name = "rules_python", version = "0.32.2")
+
+#bazel_dep(name = "com_github_grpc_grpc", version = "1.41.0")
+bazel_dep(name = "rules_nodejs", version = "6.1.1")
+bazel_dep(name = "rules_apple", version = "3.5.1", repo_name = "build_bazel_rules_apple")
+
+# Python dependencies
+#python.pip_import(
+#    name = "requirements",
+#    requirements = "//backend:requirements.txt",
+#)
+
+# gRPC and Protobuf dependencies
+#grpc_grpc_deps()
+
+#protobuf_deps()
